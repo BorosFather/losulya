@@ -1,11 +1,21 @@
-import { View, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 
  export default function Home({navigation}) {
     return (
         <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
-          <StatusBar style="auto" />
+          <Text onPress={() => navigation.navigate("About")} 
+          style={{ fontSize: 14, fontWeight: "bold"}} > Home</Text>
+          
         </View>
       );
- }
+    }
+
+ const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
